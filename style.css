@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Playfair", serif;
+    font-size: 19px;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-image: url(/PhotoRoom-20240305_113356.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position-y: 100px;
+    position: relative;
+}
+
+.body-content{
+    height: 100vh;
+    width: 100vw;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+
+.body-content p{
+    padding: 0px 10px;
+    font-size: 25px;
+}
+
+.body-content h2{
+    padding: 0px 5px;
+}
+
+.navigation .container-fluid .collapse ul li a{
+   color: white;
+   font-size: 20px;
+   padding: 5px 15px;
+}
+
+.navigation .container-fluid .collapse ul li a{
+    position: relative;
+    margin-left: 5px;
+}
+.navigation .container-fluid .collapse ul li a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: rgb(250, 209, 47);
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transition: 1s;
+}
+.navigation .container-fluid .collapse ul li a:hover{
+    color: rgb(250, 209, 47);
+}
+.navigation .container-fluid .collapse ul li a:hover::after{
+    width: 100%;
+    cursor: pointer;
+}
+
+.navigation .container-fluid .collapse .icons a i{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.navigation .container-fluid .collapse .icons a i:hover{
+    color: rgb(250, 209, 47);
+    transition: 0.5s;
+    box-shadow: 4px 4px 30px rgb(255, 234, 0);
+}
+.aboutme{
+    position: relative;
+    cursor: pointer;
+}
+.aboutme::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    bottom: -6px;
+    left: 0;
+    position: absolute;
+    background-color: rgb(250, 209, 47);
+    transition: width 1.5s;
+}
+.aboutme:hover::after{
+    width: 30%;
+}
+.Projects{
+    position: relative;
+    cursor: pointer;
+}
+.Projects::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    bottom: -6px;
+    left: 0;
+    position: absolute;
+    background-color: rgb(250, 209, 47);
+    transition: width 1.5s;
+}
+.Projects:hover::after{
+    width: 30%;
+}
+
+.card-body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.card-body img{
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   display: block;
+   transition: transform 0.5s;
+}
+
+.card-body:hover img{
+    transform: scale(1.1);
+}
+
+@media (max-width:768px) {
+    .body-content{
+        height: 100vh;
+        width: 100vw;
+        margin-top: 20%;
+        margin-left: 10%;
+    }  
+}
+
+@media (max-width:425px) {
+    .body-content{
+        height: 100vh;
+        width: 100vw;
+        margin-top: 30%;
+    }
+    .body-content h1{
+        padding: 0px;
+        margin: 0px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width:320px) {
+    .body-content{
+        height: 100vh;
+        width: 100vw;
+        margin-top: 50%;
+        margin-left: 5%;
+    }
+    .body-content h1{
+        padding: 0px;
+        margin: 0px;
+        font-size: 20px;
+    }
+    .body-content p{
+        padding: 0px;
+        margin: 0px;
+        font-size: px;
+    }
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgb(250, 209, 47));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    transition: height 1s;
+}
+
+.card-body:hover .layer{
+    height: 100%;
+}
+
+.cinzel-decorative-regular {
+    font-weight: 400;
+    font-style: normal;
+  }
+.copyText{
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: none;
+    transition: linear;
+}
+
+.readOnly{
+    padding: 5px 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: white;
+    overflow: visible;
+}
+
+
+
+
+
+
+
