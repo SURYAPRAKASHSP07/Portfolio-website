@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -8,68 +12,91 @@
     font-family: "Playfair", serif;
     font-size: 19px;
 }
+
 body{
-    height: 100vh;
     width: 100%;
-    background-color: rgb(0, 0, 0);
-    background-image: url(PhotoRoom-20240304_122616\ \(1\).png);
+    height: 100vh;
+    background: url(PhotoRoom-20240420_220505.png);
     background-position: right;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position-y: 60px;
-    position: relative;
+    background-size: 500px;
+    background-position-y: 80px;
 }
 
-.body-content{
-    height: 100vh;
-    width: 100vw;
-    margin-top: 15%;
-    margin-left: 15%;
-}
-
-.body-content p{
-    padding: 0px 10px;
-    font-size: 25px;
-}
-
-.body-content h2{
-    padding: 0px 5px;
-}
-
-.navigation .container-fluid .collapse ul li a{
-   color: white;
-   font-size: 20px;
-   padding: 5px 15px;
-}
-
-.navigation .container-fluid .collapse ul li a{
-    position: relative;
-    margin-left: 5px;
-}
-.navigation .container-fluid .collapse ul li a::after{
-    content: "";
-    width: 0%;
-    height: 3px;
-    background: rgb(250, 209, 47);
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    transition: 1s;
-}
-.navigation .container-fluid .collapse ul li a:hover{
-    color: rgb(250, 209, 47);
-}
-.navigation .container-fluid .collapse ul li a:hover::after{
+.body-contant{
     width: 100%;
-    cursor: pointer;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 }
+
+#progress{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+    cursor: pointer;
+    z-index: 1;
+}
+
+#progress-value{
+    position: absolute;
+    display: block;
+    height: calc(100% - 14px);
+    width: calc(100% - 14px);
+    background-color: black;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+::selection{
+    background-color: #ffcc00;
+    color: black;
+}
+
+.navigation .container-fluid .collapse ul li a{
+    color: white;
+    font-size: 20px;
+    padding: 5px 15px;
+ }
+ 
+ .navigation .container-fluid .collapse ul li a{
+     position: relative;
+     margin-left: 5px;
+ }
+ .navigation .container-fluid .collapse ul li a::after{
+     content: "";
+     width: 0%;
+     height: 3px;
+     background: rgb(250, 209, 47);
+     position: absolute;
+     bottom: -6px;
+     left: 0;
+     transition: 1s;
+ }
+ .navigation .container-fluid .collapse ul li a:hover{
+     color: rgb(250, 209, 47);
+ }
+ .navigation .container-fluid .collapse ul li a:hover::after{
+     width: 100%;
+     cursor: pointer;
+ }
 
 .navigation .container-fluid .collapse .icons a i{
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    border-radius: 50px;
-    font-size: 25px;
-    margin-left: 20px;
+    color: white;
+    border-radius: 50%;
 }
 
 .navigation .container-fluid .collapse .icons a i:hover{
@@ -77,164 +104,47 @@ body{
     transition: 0.5s;
     box-shadow: 4px 4px 30px rgb(255, 234, 0);
 }
-.aboutme{
-    position: relative;
-    cursor: pointer;
-}
-.aboutme::after{
-    content: '';
-    height: 3px;
-    width: 0%;
-    bottom: -6px;
-    left: 0;
-    position: absolute;
-    background-color: rgb(250, 209, 47);
-    transition: width 1.5s;
-}
-.aboutme:hover::after{
-    width: 30%;
-}
-.Projects{
-    position: relative;
-    cursor: pointer;
-}
-.Projects::after{
-    content: '';
-    height: 3px;
-    width: 0%;
-    bottom: -6px;
-    left: 0;
-    position: absolute;
-    background-color: rgb(250, 209, 47);
-    transition: width 1.5s;
-}
-.Projects:hover::after{
-    width: 30%;
-}
-
-.card-body{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-@media (max-width:768px) {
-    .body-content{
-        height: 100vh;
-        width: 100vw;
-        margin-top: 30%;
-        margin-left: 10%;
-    }  
-}
-
-@media (max-width:425px) {
-    .body-content{
-        height: 100vh;
-        width: 100vw;
-        margin-top: 35%;
-        margin-left: 10px;
-    }
-    .body-content h1{
-        padding: 0px;
-        margin: 0px;
-        font-size: 25px;
-    }
-}
-
 
 @media (max-width:375px) {
     body{
-        height: 100vh;
         width: 100%;
-        background-color: rgb(0, 0, 0);
-        background-image: url(PhotoRoom-20240305_110218.png);
-        background-position: center;
+        height: 100vh;
+        background: url(PhotoRoom-20240420_220505.png);
+        background-position: right;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position-y: 160px;
-        position: relative;
-    }
-    .body-content{
-        height: 100vh;
-        width: 100vw;
-        margin-top: 80%;
-        margin-left: 5%;
-    }
-}
-@media (max-width:425px) {
-    body{
-        height: 100vh;
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-        background-image: url(PhotoRoom-20240305_110218.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position-y: 160px;
-        position: relative;
-    }
-    .body-content{
-        height: 100vh;
-        width: 100vw;
-        margin-top: 80%;
-        margin-left: 5%;
-    }
-}
-
-@media (max-width:320px) {
-    body{
-        height: 100vh;
-        width: 100%;
-        background-color: rgb(0, 0, 0);
-        background-image: url(PhotoRoom-20240305_110218.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position-y: 160px;
-        position: relative;
-    }
-    .body-content{
-        height: 100vh;
-        width: 100vw;
-        margin-top: 80%;
-        margin-left: 5%;
+        background-size: 370px;
+        background-position-y: 60px;
     }
     
-    .body-content h1{
-        padding: 0px;
-        margin: 0px;
-        font-size: 20px;
-    }
-    .body-content p{
-        padding: 0px;
-        margin: 0px;
-        font-size: px;
+    .body-contant{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
     }
 }
-
-.cinzel-decorative-regular {
-    font-weight: 400;
-    font-style: normal;
-  }
-.copyText{
-    background-color: white;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 8px;
-    display: none;
-    transition: linear;
-}
-
-.readOnly{
-    padding: 5px 10px;
-    width: 100%;
-    outline: none;
-    border: none;
-    color: white;
-    overflow: visible;
+@media (max-width:280px) {
+    body{
+        width: 100%;
+        height: 100vh;
+        background: url(PhotoRoom-20240420_220505.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 330px;
+        background-position-y: 90px;
+        background-position-x: -30px;
+    }
+    
+    .body-contant{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .projectClass{
@@ -244,7 +154,16 @@ body{
 .projectClass:hover{
     cursor: pointer;
     box-shadow: 1px 2px 19px rgb(255, 255, 66);
-    transition: 0.3s linear;
+    transform: translateY(10px);
+    transition: 0.3s ease-in-out;
     transform: translateY(-10px);
 }
+
+
+
+
+
+
+
+
 
